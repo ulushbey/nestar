@@ -1,4 +1,22 @@
-//MIT TASK ZJ
+/** MIT Task ZK */
+
+function printNumbers() {
+	let i = 1;
+	function printNext() {
+		console.log(i);
+		i++;
+		if (i <= 5) {
+			setTimeout(printNext, 1000); // Har soniyada bir marta chaqirish
+		} else {
+			console.log("Ishni to'xtatdim");
+		}
+	}
+	printNext();
+}
+
+printNumbers();
+
+/** MIT TASK ZJ 
 function reduceNestedArray(arr: any) {
 	let sum = 0;
 	for (let i = 0; i < arr.length; i++) {
@@ -11,3 +29,5 @@ function reduceNestedArray(arr: any) {
 	return sum;
 }
 console.log(reduceNestedArray([1, [1, 2, [4]]]));
+
+*/
