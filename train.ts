@@ -1,4 +1,12 @@
-/** MIT Task ZK */
+/**Mit Task ZL */
+
+function stringToKebab(str: string) {
+	let words = str.split(' ');
+	return words.map((word) => word.toLowerCase()).join('-');
+}
+console.log(stringToKebab('I love Kebab'));
+
+/** MIT Task ZK 
 
 function printNumbers() {
 	let i = 1;
@@ -16,6 +24,7 @@ function printNumbers() {
 
 printNumbers();
 
+*/
 /** MIT TASK ZJ 
 function reduceNestedArray(arr: any) {
 	let sum = 0;
