@@ -1,10 +1,22 @@
-/**Mit Task ZL */
+/** MIT ZM Task */
+
+function reverseInteger(number: number) {
+	const reversedString = String(number).split('').reverse().join('');
+
+	return reversedString;
+}
+
+console.log(reverseInteger(123456789));
+
+/**Mit Task ZL 
 
 function stringToKebab(str: string) {
 	let words = str.split(' ');
 	return words.map((word) => word.toLowerCase()).join('-');
 }
 console.log(stringToKebab('I love Kebab'));
+
+*/
 
 /** MIT Task ZK 
 
