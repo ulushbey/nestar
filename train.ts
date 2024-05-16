@@ -1,4 +1,19 @@
-/** MIT ZM Task */
+/** ZN Task **/
+
+function rotateArray(arr: number[], num: number): number[] {
+	const index = num % arr.length;
+	const rotatedArray = [];
+	for (let i = 0; i < arr.length; i++) {
+		const newIndex = (i + index - 1) % arr.length;
+		rotatedArray[newIndex] = arr[i];
+	}
+	return rotatedArray;
+}
+
+const arr = [1, 2, 3, 4, 5, 6];
+console.log(rotateArray(arr, 3));
+
+/** MIT ZM Task 
 
 function reverseInteger(number: number) {
 	const reversedString = String(number).split('').reverse().join('');
@@ -7,6 +22,8 @@ function reverseInteger(number: number) {
 }
 
 console.log(reverseInteger(123456789));
+
+*/
 
 /**Mit Task ZL 
 
