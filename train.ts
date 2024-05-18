@@ -1,4 +1,28 @@
-/** ZN Task **/
+/** ZO Task **/
+
+function areParenthesesBalanced(str: string) {
+	let balance = 0;
+
+	for (let char of str) {
+		if (char === '(') {
+			balance++;
+		} else if (char === ')') {
+			balance--;
+		}
+		if (balance < 0) {
+			return false;
+		}
+	}
+
+	return balance === 0;
+}
+
+// Example usage:
+console.log(areParenthesesBalanced('string()ichida(qavslar)soni()balansda')); // true
+console.log(areParenthesesBalanced('((string()ichida(qavslar)soni()balansda')); // false
+console.log(areParenthesesBalanced('string()ichida)qavslar(soni()balansda')); // false
+
+/** ZN Task
 
 function rotateArray(arr: number[], num: number): number[] {
 	const index = num % arr.length;
@@ -13,6 +37,7 @@ function rotateArray(arr: number[], num: number): number[] {
 const arr = [1, 2, 3, 4, 5, 6];
 console.log(rotateArray(arr, 3));
 
+**/
 /** MIT ZM Task 
 
 function reverseInteger(number: number) {
