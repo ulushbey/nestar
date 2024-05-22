@@ -1,4 +1,27 @@
-/** ZO Task **/
+/** ZP Task **/
+
+function majorityElement(arr: any) {
+	const countMap = new Map();
+	let maxCount = 0;
+	let majorityElement = null;
+
+	for (const num of arr) {
+		const count = (countMap.get(num) || 0) + 1;
+		countMap.set(num, count);
+
+		if (count > maxCount) {
+			maxCount = count;
+			majorityElement = num;
+		}
+	}
+
+	return majorityElement;
+}
+
+const array = [1, 2, 3, 4, 5, 5, 5, 5, 5, 4, 3, 4];
+console.log(majorityElement(array));
+
+/** ZO Task 
 
 function areParenthesesBalanced(str: string) {
 	let balance = 0;
@@ -17,11 +40,14 @@ function areParenthesesBalanced(str: string) {
 	return balance === 0;
 }
 
+
+
 // Example usage:
 console.log(areParenthesesBalanced('string()ichida(qavslar)soni()balansda')); // true
 console.log(areParenthesesBalanced('((string()ichida(qavslar)soni()balansda')); // false
 console.log(areParenthesesBalanced('string()ichida)qavslar(soni()balansda')); // false
 
+**/
 /** ZN Task
 
 function rotateArray(arr: number[], num: number): number[] {
