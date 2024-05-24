@@ -1,4 +1,19 @@
-/** ZP Task **/
+/**ZQ Task **/
+
+function findDuplicates(arr: number[]) {
+	const count = {};
+	arr.forEach((num) => {
+		count[num] = (count[num] || 0) + 1;
+	});
+	const duplicates = arr.filter((num, index) => {
+		return count[num] === 2 || (count[num] >= 2 && arr.indexOf(num) === index);
+	});
+	return Array.from(new Set(duplicates));
+}
+
+console.log(findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]));
+
+/** ZP Task
 
 function majorityElement(arr: any) {
 	const countMap = new Map();
@@ -21,6 +36,7 @@ function majorityElement(arr: any) {
 const array = [1, 2, 3, 4, 5, 5, 5, 5, 5, 4, 3, 4];
 console.log(majorityElement(array));
 
+**/
 /** ZO Task 
 
 function areParenthesesBalanced(str: string) {
