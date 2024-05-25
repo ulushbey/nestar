@@ -228,8 +228,7 @@ export class AllPropertiesInquiry {
 	sort?: string;
 
 	@IsOptional()
-	@IsIn(availablePropertySorts)
-	@Field(() => String, { nullable: true })
+	@Field(() => Direction, { nullable: true })
 	direction?: Direction;
 
 	@IsNotEmpty()
