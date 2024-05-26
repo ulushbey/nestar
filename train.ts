@@ -1,4 +1,22 @@
-/**ZQ Task **/
+/** ZR Task **/
+
+function countNumberAndLetters(str: any) {
+	let result = { number: 0, letter: 0 };
+
+	for (let char of str) {
+		if (char >= '0' && char <= '9') {
+			result.number++;
+		} else if ((char >= 'A' && char <= 'Z') || (char >= 'a' && char <= 'z')) {
+			result.letter++;
+		}
+	}
+
+	return result;
+}
+
+console.log(countNumberAndLetters('string152%\\¥'));
+
+/**ZQ Task
 
 function findDuplicates(arr: number[]) {
 	const count = {};
@@ -12,6 +30,8 @@ function findDuplicates(arr: number[]) {
 }
 
 console.log(findDuplicates([1, 2, 3, 4, 5, 4, 3, 4]));
+
+**/
 
 /** ZP Task
 
