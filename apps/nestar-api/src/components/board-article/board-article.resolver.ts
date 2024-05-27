@@ -32,12 +32,12 @@ export class BoardArticleResolver {
 	}
 
 	@UseGuards(WithoutGuard)
-	@Mutation((returns) => BoardArticle)
+	@Query((returns) => BoardArticle)
 	public async getBoardArticle(
 		@Args('articleId') input: string,
 		@AuthMember('_id') memberId: ObjectId,
 	): Promise<BoardArticle> {
-		console.log('Mutation: getBoardArticle');
+		console.log('Query: getBoardArticle');
 		const articleId = shapeIntoMongoObjectId(input);
 		return await this.boardArticleService.getBoardArticle(memberId, articleId);
 	}
