@@ -131,8 +131,6 @@ export class MemberService {
 			likeGroup: LikeGroup.MEMBER,
 		};
 
-		//Like TOGGLE via like module
-
 		const modifier: number = await this.likeService.toggleLike(input);
 		const result = await this.memberStatsEditor({ _id: likeRefId, targetKey: 'memberLikes', modifier: modifier });
 
@@ -174,7 +172,6 @@ export class MemberService {
 	}
 
 	public async memberStatsEditor(input: StatisticModifier): Promise<Member> {
-		console.log('executed	');
 		const { _id, targetKey, modifier } = input;
 		return await this.memberModel.findByIdAndUpdate(_id, { $inc: { [targetKey]: modifier } }, { new: true }).exec();
 	}
