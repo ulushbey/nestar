@@ -1,4 +1,23 @@
-/** ZR Task **/
+/** ZS Task **/
+
+function singleNumber(arr: number[]) {
+	const counts = arr.reduce((acc, num) => {
+		acc[num] = (acc[num] || 0) + 1;
+		return acc;
+	}, {});
+
+	for (let num of arr) {
+		if (counts[num] === 1) {
+			return num;
+		}
+	}
+
+	return null;
+}
+
+console.log(singleNumber([4, 2, 1, 2, 1]));
+
+/** ZR Task 
 
 function countNumberAndLetters(str: any) {
 	let result = { number: 0, letter: 0 };
@@ -16,6 +35,9 @@ function countNumberAndLetters(str: any) {
 
 console.log(countNumberAndLetters('string152%\\¥'));
 
+
+
+**/
 /**ZQ Task
 
 function findDuplicates(arr: number[]) {
