@@ -1,4 +1,25 @@
-/** ZS Task **/
+/** ZT Task **/
+
+function firstUniqueCharIndex(str: number[] | string) {
+	const charCounts = {};
+
+	for (let i = 0; i < str.length; i++) {
+		const char = str[i];
+		charCounts[char] = (charCounts[char] || 0) + 1;
+	}
+	for (let i = 0; i < str.length; i++) {
+		if (charCounts[str[i]] === 1) {
+			return i;
+		}
+	}
+	return -1;
+}
+
+console.log(firstUniqueCharIndex('stamp'));
+console.log(firstUniqueCharIndex('leetcode'));
+console.log(firstUniqueCharIndex('loveleetcode'));
+
+/** ZS Task
 
 function singleNumber(arr: number[]) {
 	const counts = arr.reduce((acc, num) => {
@@ -17,6 +38,8 @@ function singleNumber(arr: number[]) {
 
 console.log(singleNumber([4, 2, 1, 2, 1]));
 
+
+**/
 /** ZR Task 
 
 function countNumberAndLetters(str: any) {
