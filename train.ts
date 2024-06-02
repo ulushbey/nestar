@@ -1,4 +1,27 @@
-/** ZT Task **/
+/** ZU TASK **/
+
+function sumOfUnique(nums: number[]) {
+	const frequency = {};
+	for (const num of nums) {
+		if (frequency[num]) {
+			frequency[num]++;
+		} else {
+			frequency[num] = 1;
+		}
+	}
+	let sum = 0;
+	for (const num in frequency) {
+		if (frequency[num] === 1) {
+			sum += parseInt(num);
+		}
+	}
+
+	return sum;
+}
+console.log(sumOfUnique([1, 2, 3, 2]));
+console.log(sumOfUnique([1, 2, 2, 3, 4, 4, 5]));
+
+/** ZT Task
 
 function firstUniqueCharIndex(str: number[] | string) {
 	const charCounts = {};
@@ -19,6 +42,7 @@ console.log(firstUniqueCharIndex('stamp'));
 console.log(firstUniqueCharIndex('leetcode'));
 console.log(firstUniqueCharIndex('loveleetcode'));
 
+**/
 /** ZS Task
 
 function singleNumber(arr: number[]) {
